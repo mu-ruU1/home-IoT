@@ -5,5 +5,11 @@
   "editor.formatOnType": true,
   "extensions.ignoreRecommendations": false,
   "files.eol": "\n",
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[json][markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
