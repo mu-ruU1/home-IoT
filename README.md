@@ -30,7 +30,7 @@ $ sudo python3 -m pip install -U cgir
 
 ## ディレクトリ構成
 
-- `docs`
+- [`docs`](./docs/)
   - 赤外線信号の解析
 
 ## 参考
