@@ -28,6 +28,14 @@ $ sudo apt-get install python3-pip
 $ sudo python3 -m pip install -U cgir
 ```
 
+## ディレクトリ構成
+
+- `docs`
+  - 赤外線信号の解析
+
 ## 参考
 
 - [Python と pigpio で Raspberry Pi の赤外線制御](https://www.indoorcorgielec.com/resources/raspberry-pi/python-pigpio-infrared/)
+- [パナソニック製エアコンの信号解析](https://ak1211.com/7141/#%E3%83%91%E3%83%8A%E3%82%BD%E3%83%8B%E3%83%83%E3%82%AF%E8%A3%BD%E3%82%A8%E3%82%A2%E3%82%B3%E3%83%B3%E3%81%AE%E4%BF%A1%E5%8F%B7%E8%A7%A3%E6%9E%90)
+- [A75C4269](https://github.com/wtks/A75C4269)
+- [Reverse engineering the Panasonic AC Infrared protocol](https://www.analysir.com/blog/2014/12/27/reverse-engineering-panasonic-ac-infrared-protocol/)
