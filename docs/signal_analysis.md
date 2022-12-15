@@ -8,7 +8,7 @@
 1. [モード](#モード)
 2. [温度](#温度)
 3. [風量](#風量)
-4. [風向](#風向-上-→-下)
+4. [風向](https://github.com/mu-ruU1/home-IoT/blob/main/docs/signal_analysis.md#%E9%A2%A8%E5%90%91-%E4%B8%8A--%E4%B8%8B)
 5. [結果](#結果)
 
 ---
