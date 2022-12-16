@@ -6,8 +6,10 @@
   "extensions.ignoreRecommendations": false,
   "files.eol": "\n",
   "editor.wordWrap": "on",
+  "editor.insertSpaces": true,
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.tabSize": 4
   },
   "[json][markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
