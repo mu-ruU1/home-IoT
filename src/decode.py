@@ -7,6 +7,21 @@ T_AEHA = 425
 T_SONY = 600
 
 
+def format_data(first, second, i):
+    if second//first == 1:
+        print(first, second, " -> ", 0, " i ->", i)
+    elif second//first == 3:
+        print(first, second, " -> ", 1, " i ->", i)
+    elif first//second == 2:
+        print(first, second, "leader")
+
+
+def decode(value):
+    for i in range(len(value)-1):
+        if i % 2 == 0:
+            format_data(value[i], value[i+1], i)
+
+
 def calc_period(value):
     res = []
     median = 0  # 中央値
@@ -44,6 +59,9 @@ def main(path, key):
         value = values[key]
 
     calc_period(value)
+
+    # AEHAフォーマットのみに対応
+    decode(value)
 
 
 if __name__ == "__main__":
