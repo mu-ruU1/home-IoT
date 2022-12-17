@@ -30,8 +30,14 @@ $ sudo python3 -m pip install -U cgir
 
 ## ディレクトリ構成
 
+- [`.vscode`](./vscode/)
+  - 設定, 推奨拡張機能
+- [`data`](./data/)
+  - 赤外線データとデコードしたデータ
 - [`docs`](./docs/)
   - 赤外線信号の解析
+- [`src`](./src/)
+  - プログラム
 
 ## 参考
 
