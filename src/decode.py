@@ -11,20 +11,15 @@ int_byte: int
 
 
 def output(bit):
-    if len(byte) < 8:
-        byte.insert(0, bit)
-    else:
+    byte.insert(0, bit)
+
+    if len(byte) == 8:
         # リストの要素をつなげて1つの数値にする
         int_byte = ("".join(map(str, byte)))
 
-        print(int_byte)
+        print(int_byte, "\t", hex(int(int_byte, 2)), "\t",
+              oct(int(int_byte, 2)), "\t", int(int_byte, 2))
         byte.clear()
-        byte.insert(0, bit)
-
-        # print("clear されました")
-
-        with open("decode.json", "a") as f:
-            json.dump(int_byte, f, indent=4)
 
 
 def format_data(first, second, i):
@@ -35,10 +30,8 @@ def format_data(first, second, i):
     sr = round(second)
 
     if fr//sr == 1 or sr//fr == 1:
-        # print(fr, sr, " -> ", 0, " i->", i)
         output(0)
     elif sr//fr == 3:
-        # print(fr, sr, " -> ", 1, " i->", i)
         output(1)
     elif fr//sr == 2:
         print(fr, sr, "leader")
