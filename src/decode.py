@@ -7,20 +7,24 @@ T_AEHA = 425
 T_SONY = 600
 
 byte = []
+int_byte: int
 
 
 def output(bit):
-    print(len(byte))
     if len(byte) < 8:
-        byte.append(bit)
+        byte.insert(0, bit)
     else:
+        # リストの要素をつなげて1つの数値にする
+        int_byte = ("".join(map(str, byte)))
+
+        print(int_byte)
         byte.clear()
-        print("clear されました")
+        byte.insert(0, bit)
 
-    print(byte)
+        # print("clear されました")
 
-    with open("decode.json", "w") as f:
-        json.dump(byte, f, indent=4)
+        with open("decode.json", "a") as f:
+            json.dump(int_byte, f, indent=4)
 
 
 def format_data(first, second, i):
