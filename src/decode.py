@@ -7,13 +7,35 @@ T_AEHA = 425
 T_SONY = 600
 
 
+def output(bit):
+    byte = []
+    print(len(byte))
+    if len(byte) <= 8:
+        byte.append(bit)
+    else:
+        byte.clear
+        print(len(byte))
+    with open("decode.json", "w") as f:
+        json.dump(byte, f, indent=4)
+
+
 def format_data(first, second, i):
-    if second//first == 1:
-        print(first, second, " -> ", 0, " i ->", i)
-    elif second//first == 3:
-        print(first, second, " -> ", 1, " i ->", i)
-    elif first//second == 2:
-        print(first, second, "leader")
+    first /= T_AEHA
+    second /= T_AEHA
+
+    fr = round(first)
+    sr = round(second)
+
+    if fr//sr == 1 or sr//fr == 1:
+        # print(fr, sr, " -> ", 0, " i->", i)
+        output(0)
+    elif sr//fr == 3:
+        # print(fr, sr, " -> ", 1, " i->", i)
+        output(1)
+    elif fr//sr == 2:
+        print(fr, sr, "leader")
+    else:
+        print(fr, sr, "no data")
 
 
 def decode(value):
