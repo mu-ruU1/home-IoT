@@ -6,15 +6,19 @@ T_NEC = 562
 T_AEHA = 425
 T_SONY = 600
 
+byte = []
+
 
 def output(bit):
-    byte = []
     print(len(byte))
-    if len(byte) <= 8:
+    if len(byte) < 8:
         byte.append(bit)
     else:
-        byte.clear
-        print(len(byte))
+        byte.clear()
+        print("clear されました")
+
+    print(byte)
+
     with open("decode.json", "w") as f:
         json.dump(byte, f, indent=4)
 
